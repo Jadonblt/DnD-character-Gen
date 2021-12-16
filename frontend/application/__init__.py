@@ -27,7 +27,7 @@ db.create_all()
 db.session.commit()
 
 letters = string.ascii_lowercase
-aFeat = feat(name="Test Feat".join(random.choice(letters) for i in range(10)), effects="This is a filler data", skillmodify="non")
+aFeat = feat(name="".join(random.choice(letters) for i in range(10)), effects="This is a filler data", skillmodify="non")
 
 db.session.add(aFeat)
 db.session.commit()
