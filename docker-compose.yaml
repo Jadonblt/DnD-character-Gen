@@ -4,6 +4,8 @@ services:
     container_name: frontend
     build: ./frontend
     image: dockerjadon/python-frontend
+    deploy:
+      replicas: 2
     ports:
     - target: 5000
       published: 5000
@@ -12,6 +14,8 @@ services:
     container_name: backend
     build: ./backend
     image: dockerjadon/python-backend
+    deploy:
+      replicas: 2
     ports:
     - target: 5003
       published: 5003
@@ -19,6 +23,8 @@ services:
     container_name: service1
     build: ./service1
     image: dockerjadon/python-service1
+    deploy:
+      replicas: 2
     ports:
     - target: 5001
       published: 5001
@@ -26,6 +32,8 @@ services:
     container_name: service2
     build: ./service2
     image: dockerjadon/python-service2
+    deploy:
+      replicas: 2
     ports:
     - target: 5002
       published: 5002
@@ -43,5 +51,3 @@ services:
 
 volumes:
   mysql_db_data_container:
-
-

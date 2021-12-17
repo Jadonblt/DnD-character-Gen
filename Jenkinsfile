@@ -1,14 +1,12 @@
 pipeline {
+    environment {
+        DOCKERHUB_CREDENTIALS=credentials'dockerjadon-dockerhub'
+    }
     agent any
     stages {
-        stage('Build App') {
+        stage('Build Images') {
             steps {
                 sh ''
-            }
-        }
-        stage('Test') {
-            steps {
-                //
             }
         }
         stage('Deploy') {
