@@ -18,6 +18,10 @@ services:
       ADMINER_DEFAULT_SERVER: mysql_db_container
     ports:
       - 8080:8080
+
+volumes:
+  mysql_db_data_container:
+
   frontend:
     container_name: frontend
     build: ./frontend
@@ -47,5 +51,4 @@ services:
     ports:
     - target: 5002
       published: 5002
-  volumes:
-    mysql_db_data_container:
+
