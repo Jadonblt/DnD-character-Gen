@@ -3,7 +3,7 @@ services:
   frontend:
     container_name: frontend
     build: ./frontend
-    image: python-frontend:latest
+    image: dockerjadon/python-frontend
     ports:
     - target: 5000
       published: 5000
@@ -11,21 +11,21 @@ services:
   backend:
     container_name: backend
     build: ./backend
-    image: python-backend:latest
+    image: dockerjadon/python-backend
     ports:
     - target: 5003
       published: 5003
   service1:
     container_name: service1
     build: ./service1
-    image: python-service1:latest
+    image: dockerjadon/python-service1
     ports:
     - target: 5001
       published: 5001
   service2:
     container_name: service2
     build: ./service2
-    image: python-service2:latest
+    image: dockerjadon/python-service2
     ports:
     - target: 5002
       published: 5002
