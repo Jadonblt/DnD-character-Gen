@@ -15,7 +15,6 @@ Our Pipeline allows for us to deploy our Application automatically and in a dock
 
 **Pipeline Stages**
 Build
-
 Test
 Deply
 
